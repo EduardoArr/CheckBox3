@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CheckBox</string>
+    <string name="Nombre">Nombre</string>
+    <string name="Apellido">Apellido</string>
+    <string name="tv">¿Que lenguaje de programacion has usado?</string>
+    <string name="Java">Java</string>
+    <string name="Python">Python</string>
+    <string name="C">C</string>
+    <string name="Kotlin">Kotlin</string>
 </resources>
