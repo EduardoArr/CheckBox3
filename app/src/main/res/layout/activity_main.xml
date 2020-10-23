@@ -10,62 +10,71 @@
         android:id="@+id/Nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="100dp"
+        android:autofillHints="@string/Nombre"
         android:ems="10"
         android:hint="@string/Nombre"
-        android:autofillHints="@string/Nombre"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.298"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.118" />
 
     <EditText
         android:id="@+id/Apellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
         android:layout_marginTop="48dp"
+        android:autofillHints="@string/Apellido"
         android:ems="10"
         android:hint="@string/Apellido"
-        android:autofillHints="@string/Apellido"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.298"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Nombre" />
+        app:layout_constraintTop_toBottomOf="@+id/Nombre"
+        app:layout_constraintVertical_bias="0.002" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="275dp"
         android:layout_height="22dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
         android:layout_marginTop="52dp"
         android:text="@string/tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.441"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Apellido" />
+        app:layout_constraintTop_toBottomOf="@+id/Apellido"
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/Java"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
         android:text="@string/Java"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.002" />
 
     <CheckBox
         android:id="@+id/C"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="56dp"
         android:text="@string/C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.162"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Java" />
+        app:layout_constraintTop_toBottomOf="@+id/Java"
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/Python"
@@ -75,8 +84,12 @@
         android:layout_marginLeft="84dp"
         android:layout_marginTop="40dp"
         android:text="@string/Python"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/Java"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/Kotlin"
@@ -86,7 +99,37 @@
         android:layout_marginLeft="104dp"
         android:layout_marginTop="52dp"
         android:text="@string/Kotlin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.007"
         app:layout_constraintStart_toEndOf="@+id/C"
-        app:layout_constraintTop_toBottomOf="@+id/Python" />
+        app:layout_constraintTop_toBottomOf="@+id/Python"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <TextView
+        android:id="@+id/Resultado"
+        android:layout_width="251dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:onClick="resultado"
+        android:text="@string/Boton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/C"
+        app:layout_constraintVertical_bias="0.01" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
