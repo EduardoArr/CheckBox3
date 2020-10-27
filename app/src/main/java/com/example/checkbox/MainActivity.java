@@ -43,24 +43,40 @@ public class MainActivity extends AppCompatActivity {
         String python = py.getText().toString();
         String kotlin = k.getText().toString();
         String C =  c.getText().toString();
-
+        int contador = 0;
+        String respuesta = "";
         if(nombre.isEmpty() && apellido.isEmpty() || nombre.isEmpty() | apellido.isEmpty()){
             Toast.makeText(this,"Ponme algo en nombre y apellido", Toast.LENGTH_SHORT).show();
         }else{
-            if(j.isChecked() && py.isChecked() && k.isChecked() && c.isChecked()){
-                resu.setText(nombre + " " + apellido + " " + "sabe programar de todo, que maquina");
+            String aux = nombre + " " + apellido + " ha usado: ";
 
-            } else if(j.isChecked()){
-                resu.setText(nombre + " " + apellido + " " + "sabe programar en " + java);
-            }else if(py.isChecked()){
-                resu.setText(nombre + " " + apellido + " " + "sabe programar en " + python);
-            }else if(k.isChecked()){
-                resu.setText(nombre + " " + apellido + " " + "sabe programar en " + kotlin);
-            }else if(c.isChecked()) {
-                resu.setText(nombre + " " + apellido + " " + "sabe programar en " + C);
-            }else{
-                resu.setText(nombre + " " + apellido + " " + "no sabe programar nada");
+            if(j.isChecked()){
+              respuesta = respuesta + java + ", ";
+              contador++;
+
             }
+
+            if(py.isChecked()){
+                respuesta = respuesta + python + ", ";
+                contador++;
+
+            }
+            if(k.isChecked()){
+                respuesta = respuesta  + kotlin + ", ";
+                contador++;
+
+            }
+            if(c.isChecked()) {
+               respuesta = respuesta + C + ", ";
+               contador++;
+
+            }
+            if(contador == 0){
+                resu.setText(aux + " no sabe programar nada");
+            }else {
+                resu.setText(aux + respuesta + " un total de " + contador);
+            }
+
         }
 
 
